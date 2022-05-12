@@ -15,15 +15,13 @@ class File:
                 print(line)
 
     @staticmethod
-    def openFile1(self):
-        with open("../file/data.txt", 'a', encoding='utf-8') as f:
+    def openFile1():
+        with open("../file/data.txt", 'r', encoding='utf-8') as f:
             while True:
                 line = f.readline()
                 if not line:
                     break
-                print(line),  # 加了 ',' 是为了避免 print 自动换行
-
-                f.write("if you ....")
+                print(line)
 
     @staticmethod
     def img():
@@ -62,5 +60,5 @@ class File:
 
 
 if __name__ == '__main__':
-    File.download_file()
+    File.openFile1()
 
